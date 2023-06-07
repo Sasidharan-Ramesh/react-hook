@@ -8,6 +8,10 @@ const UserContext = createContext();
 export default function Context() {
     const [user,setUser] = useState("Sasi")
 
+    const change = () =>{
+      setUser("R.Sasi")
+    }
+    
     console.log("useContext worked")
   
     return(
@@ -24,6 +28,7 @@ export default function Context() {
       <UserContext.Provider value={user}>
         <h3>useContext</h3>
         <p>Hi {user}</p>
+        <button onClick={change}>click</button>
         <Component2 />
       </UserContext.Provider>
      </div>
